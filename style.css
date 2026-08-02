@@ -1,0 +1,341 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f9f8f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #d9534f;
+    color: #fff;
+    padding: 15px 5%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+header input[type="text"] {
+    padding: 8px 15px;
+    width: 250px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #f0ad4e;
+}
+
+/* Hero Banner */
+.banner {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=1200') center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.banner h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #ffc107;
+}
+
+.banner p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.banner button, .offer button {
+    background-color: #ff9800;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.banner button:hover, .offer button:hover {
+    background-color: #e68a00;
+}
+
+/* Section Titles */
+.title {
+    text-align: center;
+    margin: 40px 0 20px;
+    font-size: 28px;
+    color: #d9534f;
+    position: relative;
+}
+
+.title::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background-color: #d9534f;
+    display: block;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+/* Categories Section */
+.category {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 0 5%;
+}
+
+.category div {
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    color: #444;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+}
+
+.category div:hover {
+    background-color: #d9534f;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Product Cards Grid */
+.products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #fff;
+    width: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding-bottom: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin: 12px 0 5px;
+    color: #333;
+}
+
+.card p {
+    color: #d9534f;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.card button {
+    background-color: #5cb85c;
+    color: #fff;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.card button:hover {
+    background-color: #4cae4c;
+}
+
+/* Special Offer Section */
+.offer {
+    background-color: #fff3cd;
+    border-left: 6px solid #ffc107;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 50px 5%;
+    border-radius: 8px;
+}
+
+.offer h2 {
+    color: #856404;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.offer p {
+    color: #856404;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Reviews Section */
+.review {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 5% 40px;
+}
+
+.box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    text-align: center;
+    border-top: 3px solid #d9534f;
+}
+
+.box p {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 20px;
+}
+
+footer h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES
+   ========================================== */
+
+/* Tablet & PC (Max Width: 992px) */
+@media screen and (max-width: 992px) {
+    header {
+        justify-content: space-around;
+    }
+
+    .banner h2 {
+        font-size: 32px;
+    }
+
+    .card {
+        width: 45%; /* ট্যাবলেটে পাশাপাশি ২টি কার্ড থাকবে */
+    }
+}
+
+/* Mobile Devices (Max Width: 600px) */
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 20px;
+    }
+
+    header input[type="text"] {
+        width: 100%; /* সার্চ বার ফুল উইড্থ হবে */
+    }
+
+    nav {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .banner {
+        padding: 50px 15px;
+    }
+
+    .banner h2 {
+        font-size: 26px;
+    }
+
+    .banner p {
+        font-size: 15px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .card {
+        width: 100%; /* মোবাইলে প্রতিটি প্রোডাক্ট পুরো উইড্থ জুড়ে থাকবে */
+        max-width: 320px;
+    }
+
+    .box {
+        width: 100%; /* কাস্টমার রিভিউ ফুল উইড্থ হবে */
+        max-width: 320px;
+    }
+
+    .offer h2 {
+        font-size: 24px;
+    }
+
+    .offer p {
+        font-size: 15px;
+    }
+}
